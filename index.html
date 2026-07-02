@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whack-A-Mole!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #2c3e50;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        .score-board {
+            font-size: 24px;
+            margin-bottom: 20px;
+            background: #34495e;
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 120px);
+            grid-gap: 15px;
+        }
+
+        .hole {
+            width: 120px;
+            height: 120px;
+            background: #795548;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+            border: 4px solid #5d4037;
+            box-shadow: inset 0 10px 0 rgba(0,0,0,0.3);
+        }
+
+        .mole {
+            width: 100%;
+            height: 100%;
+            background: #ff9800;
+            border-radius: 50%;
+            position: absolute;
+            top: 100%; /* Hidden by default */
+            transition: top 0.1s ease;
+            cursor: pointer;
+        }
+
+        /* Active class to pop the mole up */
+        .mole.up {
+            top: 20%;
+        }
+
+        /* A quick face for the mole using CSS */
+        .mole::before {
+            content: '👀';
+            position: absolute;
+            top: 20%;
+            left: 35%;
+            font-size: 24px;
+        }
+
+        button {
+            margin-top: 25px;
+            padding: 12px 24px;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Whack-A-Mole!</h1>
+    <div class="score-board">Score: <span id="score">0</span></div>
+    
+    <div class="game-grid">
+        <div class="hole"><div class="mole"></div></div>
+        <div class="hole"><div class="mole"></div></div>
+        <div class="hole"><div class="mole"></div></div>
+        <div class="hole"><div class="mole"></div></div>
+        <div class="hole"><div class="mole"></div></div>
+        <div class="hole"><div class="mole"></div></div>
+    </div>
+
+    <button id="start-btn">Start Game</button>
+
+    <script>
+        const holes = document.querySelectorAll('.hole');
+        const moles = document.querySelectorAll('.mole');
+        const scoreBoard = document.querySelector('#score');
+        const startBtn = document.querySelector('#start-btn');
+        
+        let lastHole;
+        let score = 0;
+        let gameTimeUp = false;
+
+        // Generate a random time for the mole to stay up
+        function randomTime(min, max) {
+            return Math.round(Math.random() * (max - min) + min);
+        }
+
+        // Pick a random hole, making sure it doesn't repeat sequentially
+        function randomHole(holes) {
+            const idx = Math.floor(Math.random() * holes.length);
+            const hole = holes[idx];
+            if (hole === lastHole) {
+                return randomHole(holes);
+            }
+            lastHole = hole;
+            return hole;
+        }
+
+        // Control the mole popping up and down
+        function peep() {
+            const time = randomTime(600, 1200); // speed range in milliseconds
+            const hole = randomHole(holes);
+            const mole = hole.querySelector('.mole');
+            
+            mole.classList.add('up');
+
+            setTimeout(() => {
+                mole.classList.remove('up');
+                if (!gameTimeUp) peep();
+            }, time);
+        }
+
+        // Initialize and start the game loop
+        function startGame() {
+            score = 0;
+            scoreBoard.textContent = score;
+            gameTimeUp = false;
+            startBtn.disabled = true;
+            startBtn.textContent = "Playing...";
+            
+            peep();
+
+            // Game lasts for 15 seconds
+            setTimeout(() => {
+                gameTimeUp = true;
+                startBtn.disabled = false;
+                startBtn.textContent = "Start Game";
+                alert(`Game Over! Your final score is ${score}`);
+            }, 15000);
+        }
+
+        // Handle hitting the mole
+        function whack(e) {
+            // Prevent cheating via scripted clicks
+            if(!e.isTrusted) return; 
+            
+            score++;
+            this.classList.remove('up'); // Hide the mole immediately on hit
+            scoreBoard.textContent = score;
+        }
+
+        // Event Listeners
+        startBtn.addEventListener('click', startGame);
+        moles.forEach(mole => mole.addEventListener('click', whack));
+    </script>
+</body>
+</html>
