@@ -24,8 +24,6 @@
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your.email@example.com)
 [![Portfolio](https://img.shields.io/badge/Portfolio-FF6B6B?style=for-the-badge&logo=globe&logoColor=white)](https://your-portfolio.com)
 [![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/YOUR_USERNAME)
-[![HackerRank](https://img.shields.io/badge/HackerRank-2EC866?style=for-the-badge&logo=hackerrank&logoColor=white)](https://www.hackerrank.com/YOUR_USERNAME)
-
 </div>
 
 ---
@@ -42,8 +40,6 @@ I'm committed to continuous learning and staying updated with the latest DevOps 
 
 - ☁️ **Advanced Kubernetes**: Operators, Helm Charts, Advanced Networking
 - 🔐 **Cloud Security**: IAM, Secrets Management, Security Best Practices
-- 📊 **Monitoring & Logging**: Prometheus, Grafana, ELK Stack
-- 🧪 **Infrastructure-as-Code**: Terraform, Ansible, CloudFormation
 - 🐍 **Python for DevOps**: Automation Scripts and Tools Development
 
 ---
@@ -70,11 +66,8 @@ I'm committed to continuous learning and staying updated with the latest DevOps 
 
 ![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white)
 ![C](https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=white)
-![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
-![YAML](https://img.shields.io/badge/YAML-CB171E?style=for-the-badge&logo=yaml&logoColor=white)
-![JSON](https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=json&logoColor=white)
 
 </div>
 
@@ -86,16 +79,6 @@ I'm committed to continuous learning and staying updated with the latest DevOps 
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
-
-</div>
-
-### 🛠️ Developer Tools
-
-<div align="center">
-
-![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ%20IDEA-000000?style=for-the-badge&logo=intellij-idea&logoColor=white)
-![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 
 </div>
 
@@ -115,14 +98,7 @@ Multi-tier application containerized with Docker, complete with docker-compose o
 ### 🔄 CI/CD Pipeline
 [![Repo](https://img.shields.io/badge/View%20Repo-181717?style=for-the-badge&logo=github)](https://github.com/jaganchalla546-web/YOUR_PROJECT_NAME)
 
-End-to-end CI/CD pipeline using GitHub Actions and Jenkins with automated testing, building, and deployment workflows.
-
----
-
-### ⚙️ Kubernetes Deployment
-[![Repo](https://img.shields.io/badge/View%20Repo-181717?style=for-the-badge&logo=github)](https://github.com/jaganchalla546-web/YOUR_PROJECT_NAME)
-
-Production-grade Kubernetes manifests with helm charts, resource management, and scaling capabilities.
+End-to-end CI/CD pipeline using GitHub Actions and Jenkins with automated testing, building, and deployment 
 
 ---
 
@@ -130,13 +106,6 @@ Production-grade Kubernetes manifests with helm charts, resource management, and
 [![Repo](https://img.shields.io/badge/View%20Repo-181717?style=for-the-badge&logo=github)](https://github.com/jaganchalla546-web/YOUR_PROJECT_NAME)
 
 Responsive portfolio showcasing projects and technical expertise, built with modern web technologies.
-
----
-
-### ⚡ DevOps Automation Scripts
-[![Repo](https://img.shields.io/badge/View%20Repo-181717?style=for-the-badge&logo=github)](https://github.com/jaganchalla546-web/YOUR_PROJECT_NAME)
-
-Collection of Bash, Python, and Ansible scripts for infrastructure automation and deployment tasks.
 
 </div>
 
@@ -236,35 +205,4 @@ I'm always open to:
 
 ---
 
-## 📝 Notes for Customization
-
-Please replace the following placeholders with your actual information:
-
-1. **`YOUR_PROFILE_IMAGE_URL_HERE`** → Link to your profile photo (e.g., from GitHub, LinkedIn, or cloud storage)
-2. **`YOUR_LINKEDIN_USERNAME`** → Your LinkedIn profile username
-3. **`your.email@example.com`** → Your actual email address
-4. **`https://your-portfolio.com`** → Link to your portfolio website
-5. **`YOUR_USERNAME`** → Your LeetCode and HackerRank usernames
-6. **`YOUR_TWITTER_HANDLE`** → Your Twitter handle (optional)
-7. **`jaganchalla546-web`** → Already set to your GitHub username
-8. **Project Repository Links** → Replace `YOUR_PROJECT_NAME` with your actual project repositories
-
----
-
-## 🎨 Features Included
-
-✅ Professional gradient header with badges
-✅ Centered profile picture with styling
-✅ Animated typing effect
-✅ Comprehensive skills section with shields.io badges
-✅ Featured projects showcase
-✅ GitHub statistics and contribution graph
-✅ Career goals and DevOps mindset
-✅ Multiple contact methods
-✅ Visitor counter
-✅ Dark mode compatible
-✅ Mobile responsive
-✅ ATS-friendly structure
-✅ Recruiter-friendly layout
-✅ Premium professional appearance
-
+ 
